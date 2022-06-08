@@ -1,0 +1,238 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+/* *************** add note popup box css************* */
+.popup-Add{
+    opacity: 0;
+    pointer-events: none;
+
+}
+.popup-Add.show{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.popup-Add{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+
+}
+.popup-back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    height: 260px;
+    width: 200px;
+
+}
+.popup{
+    
+    height: 250px;
+    display: flex;
+    flex-direction: column; 
+    
+    /* justify-content: center;  */
+    align-items: center;
+}
+.popup .head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(201, 191, 191);
+   
+}
+.popup .head i{
+    margin-top: 0;
+    font-size: 20px;
+    cursor: pointer;
+}
+.popup .head p{
+font-size: 16px;
+font-weight: 600;
+
+}
+.popup li{
+    list-style: none;
+    margin: 10px;
+}
+.popup ul{
+
+    height: 200px;
+}
+.popup ul li textarea{
+    height: 70px;
+    width: 100%;
+    resize: none;
+}
+.popup ul li .titleInput{
+    height: 30px;
+    width: 100%;
+}
+button{
+    margin-top: 20px;
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    background: rgb(121, 231, 217);
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+}
+.search{
+    display: block;
+    text-align: end;
+    margin: 30px 30px;
+   
+    
+
+}
+.search input{
+    height: 25px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+
+}
+
+/* **************main page part css*************** */
+body{
+    background: rgb(121, 231, 217);
+}
+.main-page{
+    margin: 40px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fill,200px);
+   
+    width: 100vw;
+    
+}
+
+.add-notes{
+    height: 250px;
+    width: 200px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgb(79, 165, 154);
+    border-radius: 5px;
+   
+}
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed rgb(121, 231, 217);
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.icon i{
+    color: rgb(121, 231, 217);
+    font-size: 30px;
+    font-weight: 100;
+}
+.add-notes p{
+    font-size: 20px;
+    font-weight: 800;
+    margin-top: 10px;
+    color:rgb(121, 231, 217);
+
+}
+/* .sub-notes{
+    margin: ;
+} */
+.notes{
+height: 250px;
+width: 200px;
+background: #fff;
+list-style: none;
+padding: 20px;
+position: relative;
+border-radius: 5px;
+
+}
+.header ul li{
+    list-style: none;
+}
+.header .title{
+    font-size: 20px;
+    font-weight: 800;
+    margin-top: 10px;
+    border-bottom: 1px solid rgb(201, 191, 191);
+}
+.header .discription{
+
+    font-size: 16px;
+    color: rgb(201, 191, 191);
+    margin-top: 15px;
+}
+.footer{
+    border-top: 1px solid rgb(201, 191, 191);
+    position: absolute;
+    top: 210px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    color: rgb(173, 173, 173);
+    
+}
+.footer span,i{
+    margin-top: 7px;
+}
+
+.footer i{
+    cursor: pointer;
+}
+/* *******************setting**************** */
+.setting {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background:#fff;
+    box-shadow: 0 0 6px rgba(0,0,0,0.15);;
+   width: 70px;
+   text-align: center;
+   font-weight: 600;
+   padding: 4px;
+    
+    color:black;
+    transform:scale(0);
+    transition: transform 0.2s ease;
+    transform-origin: bottom right;
+    cursor: pointer;
+}
+.menu:hover .setting{
+    
+    transform: scale(1);
+    
+    
+}
+.setting i:hover{
+    background-color: rgb(238, 238, 238);
+}
